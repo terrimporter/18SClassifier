@@ -1,14 +1,14 @@
 # Introduction
 
-This repository contains training sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote 18S rDNA sequences.
+This repository contains trained reference sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote 18S rDNA sequences.
 
 # Releases
 
 ## July 12, 2018
 
-18Sv2.0 was created to classify Eukaryotes for Jesse Hoage's Master's thesis.  18S rDNA sequences were mined from GenBank in 2017.
+18Sv2.0 was created to classify Eukaryotes for Jesse Hoage's Master's thesis.  18S rDNA sequences were mined from GenBank July 24, 2017.
 
-18Sv1.0 was created to specifically classify diatoms (Bacillariophyta).  18S rDNA sequences were mined from GenBank in 2016.
+18Sv1.0 was created to specifically classify diatoms (Bacillariophyta).  18S rDNA sequences were mined from GenBank August 25, 2016.
 
 # References
 
