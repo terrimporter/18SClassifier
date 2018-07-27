@@ -17,6 +17,9 @@ my $value;
 my $newval;
 my $outfile = "SILVA_inconsistencies.txt";
 my $count;
+my $total;
+my $counter=0;
+my $prop;
 
 #array
 my @fasta;
@@ -76,5 +79,11 @@ foreach $species (keys %species) {
 		next;
 	}
 	print OUT "//\n";
+	$counter++;
 }
+
+$total = scalar keys %species;
+$prop = $counter/$total*100;
+print "There are a total of $counter species ($prop) with more than one path\n";
+print "There are a total of $total species in the SILVA file\n";
 close OUT;
