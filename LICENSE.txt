@@ -1,6 +1,6 @@
-CO1Classifier (c) by Teresita M. Porter
+18S Classifier (c) by Teresita M. Porter
 
-CO1Classifier is licensed under a
+18SClassifier is licensed under a
 Creative Commons Attribution 4.0 International License.
 
 You should have received a copy of the license along with this

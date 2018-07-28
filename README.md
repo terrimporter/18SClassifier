@@ -4,6 +4,10 @@ This repository contains trained reference sets that can be used with the Riboso
 
 # Releases
 
+## July 27, 2018
+
+18Sv3.0 was created from the SILVA 132 SSU Ref Nr99 with the following modifications.  All possible Eukaryote sequences were retained.  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with vsearch 2.4.2. Species with more than one unique taxonomic lineage were identified using the check_for_SILVA_inconsistencies.plx script in the CheckSilvaTaxonomy directory.  A total of 3,633 / 140,478 (2.6%) unique species and their associated sequences were excluded from the classifier.
+
 ## July 12, 2018
 
 18Sv2.0 was created to classify Eukaryotes for Jesse Hoage's Master's thesis.  18S rDNA sequences were mined from GenBank July 24, 2017.
