@@ -8,7 +8,7 @@ This repository contains trained reference sets that can be used with the Riboso
 
 18Sv3.0 was created from the SILVA 132 SSU Ref Nr99 (Preusse et al., 2007), the most recent curated dataset, with the following modifications.  Species with more than one unique taxonomic lineage were identified using the check_for_SILVA_inconsistencies.plx script in the CheckSilvaTaxonomy directory.  As a result, a total of 3,633 / 140,478 (2.6%) unique species and their associated sequences were excluded from the classifier.  After that filtering, all possible Eukaryote sequences were retained.  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with vsearch 2.4.2 (Rognes et al., 2016). The final set here is comprised of 51,697 sequences representing 53,594 taxa (at all ranks).
 
-Reccomended MINIMUM cutoffs according to query length:
+Recommended MINIMUM cutoffs according to query length:
 
 Rank | Full | 600 bp | 400 bp | 200 bp | 100 bp | 50 bp
 --- |:---:|:---:|:---:|:---:|:---:|:---:
