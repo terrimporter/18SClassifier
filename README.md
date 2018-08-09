@@ -8,7 +8,9 @@ This repository contains trained reference sets that can be used with the Riboso
 
 Created from the SILVA 132 SSU Ref Nr99 (Preusse et al., 2007), the most recent curated dataset, with the following modifications.  Species with more than one unique taxonomic lineage were identified using the check_for_SILVA_inconsistencies.plx script in the CheckSilvaTaxonomy directory.  As a result, a total of 3,633 / 140,478 (2.6%) unique species and their associated sequences were excluded from the classifier.  After that filtering, all possible Eukaryote sequences were retained.  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with vsearch 2.4.2 (Rognes et al., 2016). The final set here is comprised of 51,697 sequences representing 53,594 taxa (at all ranks).  
 
-Taxonomic assignment results can be filtered according to their bootstrap support values to reduce false positive assignments.  Cutoffs are based on leave one out testing of non-singleton species.  Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments.
+Taxonomic assignment results can be filtered according to their bootstrap support values to reduce false positive assignments.  Cutoffs are based on leave one out testing of non-singleton species.  
+
+Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments.
 
 Recommended MINIMUM cutoffs according to query length:
 
@@ -24,6 +26,21 @@ Genus | NA | NA | NA | NA | NA | NA
 Species | NA | NA | NA | NA | NA | NA
 
 NA = No cutoff available will result in 99% correct assignments
+
+Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~ 95% correct assignments.
+
+Rank | Full | 600 bp | 400 bp | 200 bp | 100 bp | 50 bp
+--- |:---:|:---:|:---:|:---:|:---:|:---:
+Superkingdom | 0 | 0 | 0 | 0 | 0 | 0
+Kingdom | 0 | 0 | 0 | 0 | 0 | 70
+Phylum | 0 | 0 | 0 | 0 | 10 | NA
+Class | 0 | 0 | 0 | 0 | 40 | NA
+Order | 0 | 30 | 40 | 60 | NA | NA
+Family | 50 | 50 | 60 | 80 | NA | NA
+Genus | 90 | 80 | 80 | 90 | NA | NA
+Species | NA | NA | NA | NA | NA | NA
+
+NA = No cutoff available will result in 95% correct assignments
 
 ### 18S v2.0
 
