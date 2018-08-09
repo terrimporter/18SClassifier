@@ -6,7 +6,9 @@ This repository contains trained reference sets that can be used with the Riboso
 
 ### 18S v3.0
 
-Created from the SILVA 132 SSU Ref Nr99 (Preusse et al., 2007), the most recent curated dataset, with the following modifications.  Species with more than one unique taxonomic lineage were identified using the check_for_SILVA_inconsistencies.plx script in the CheckSilvaTaxonomy directory.  As a result, a total of 3,633 / 140,478 (2.6%) unique species and their associated sequences were excluded from the classifier.  After that filtering, all possible Eukaryote sequences were retained.  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with vsearch 2.4.2 (Rognes et al., 2016). The final set here is comprised of 51,697 sequences representing 53,594 taxa (at all ranks).
+Created from the SILVA 132 SSU Ref Nr99 (Preusse et al., 2007), the most recent curated dataset, with the following modifications.  Species with more than one unique taxonomic lineage were identified using the check_for_SILVA_inconsistencies.plx script in the CheckSilvaTaxonomy directory.  As a result, a total of 3,633 / 140,478 (2.6%) unique species and their associated sequences were excluded from the classifier.  After that filtering, all possible Eukaryote sequences were retained.  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with vsearch 2.4.2 (Rognes et al., 2016). The final set here is comprised of 51,697 sequences representing 53,594 taxa (at all ranks).  
+
+Taxonomic assignment results can be filtered according to their bootstrap support values to reduce false positive assignments.  Cutoffs are based on leave one out testing of non-singleton species.  Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments.
 
 Recommended MINIMUM cutoffs according to query length:
 
