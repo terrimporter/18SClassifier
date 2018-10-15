@@ -10,7 +10,7 @@ A few invasive species of interest were added even though they were not present 
 
 ### 18S v3.1
 
-An additional properties file was added to allow the classifier to run properly.
+Fixes punctuation errors in the header that breaks the classifier.
 
 ### 18S v3.0
 
