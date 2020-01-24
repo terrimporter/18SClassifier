@@ -66,4 +66,6 @@ Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Cl
 
 # Acknowledgements
 
-I would like to acknowledge funding from the Government of Canada through the Genomics Research and Development Initiative, EcoBiomics project.
+We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
+
+Last updated: January 24, 2020
