@@ -16,7 +16,7 @@ This version of the 18S classifier has been trained to make assignments to the *
 2) based on the results of our leave-one-sequence-out testing of our 18S v3 classifier (see below) it was not possible to obtain 95% accuracy at the species rank for any fragment length anyways, and,  
 3) the naive Bayesian classifier is *not* a phylogeny-based taxonomic assignment method and it *requires* that all taxa at the assignment rank have a single unique lineage, a requirement that is not met for species in the SILVA dataset.
 
-Species names were stripped from the SILVA fasta file, and any sequence that did not have a genus level taxonomic assignment remaining in the SILVA taxonomy file was discarded.  After that filtering, all possible Eukaryote sequences were retained.  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with VSEARCH 2.14.1 (Rognes et al., 2016). The final set reference set here is comprised of 42,301 sequences representing 7,504 taxa (at all ranks).  
+Species names were stripped from the SILVA fasta file, and any sequence that did not have a genus level taxonomic assignment remaining in the SILVA taxonomy file was discarded.  It is likely that uncultured environmental sequences that are curated and named above the family rank (Yilmaz et al., 2013) are removed at this step.  After that filtering, all possible Eukaryote sequences were retained.  There were 2,841 eukaryote genera in the SILVA taxonomy file and 2,837 unique eukaryote genera in our reference set.  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with VSEARCH 2.14.1 (Rognes et al., 2016). The final set reference set here is comprised of 42,301 sequences representing 7,504 taxa (at all ranks).  
 
 Taxonomic assignment results should be filtered according to their bootstrap support values to reduce false positive assignments.  Cutoffs are based on leave-one-sequence-out testing of non-singleton genera. Here we recommend MINIMUM bootstrap cutoffs according to query length and assignment rank.  Assuming your query sequences are represented in the reference set, using the cutoffs presented in the first table below should ensure 99% accuracy.  If you wish to cast a wider net, you can use the second table below for 95% accuracy.
 
@@ -107,6 +107,8 @@ Pruesse E, Quast C, Knittel K, Fuchs BM, Ludwig WG, Peplies J, Glöckner FO (200
 Rognes, T., Flouri, T., Nichols, B., Quince, C., & Mahé, F. (2016). VSEARCH: a versatile open source tool for metagenomics. PeerJ, 4, e2584. doi:10.7717/peerj.2584
 
 Wang, Q., Garrity, G. M., Tiedje, J. M., & Cole, J. R. (2007). Naive Bayesian Classifier for Rapid Assignment of rRNA Sequences into the New Bacterial Taxonomy. Applied and Environmental Microbiology, 73(16), 5261–5267. Available from https://sourceforge.net/projects/rdp-classifier/
+
+Yilmaz, P., Parfrey, L.W., Yarza, P., Gerken, J., Pruesse, E., Quast, C., et al. (2014) The SILVA and “All-species Living Tree Project (LTP)” taxonomic frameworks. Nucleic Acids Research, 42: D643–D648. doi:10.1093/nar/gkt1209
 
 # Acknowledgements
 
