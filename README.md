@@ -12,11 +12,36 @@ We checked for the presence of species with more than one unique taxonomic linea
 
 This version of the 18S classifier has been trained to make assignments to the **genus** rank only.  This was done for 3 reasons:  
 
-1) SILVA only curates their phylogeny-based taxonomy to the genus rank (even though species labels are  present in their fasta file),  
-2) based on the results of our leave-one-sequence-out testing of our 18S v3 classifier (see below) it was not possible to obtain 95% accuracy at the species rank for any fragment length anyways, and,  
-3) the naive Bayesian classifier is *not* a phylogeny-based taxonomic assignment method and it *requires* that all taxa at the assignment rank have a single unique lineage, a requirement that is not met for species in the SILVA dataset.
+1) SILVA curates their phylogeny-based taxonomy to the genus rank (even though species labels are  present in their fasta file);  
+2) Based on the results of our leave-one-sequence-out testing of our 18S v3 classifier (below) it was not possible to obtain 95% accurate taxonomic assignments to the species rank for any fragment length anyways; and,  
+3) The naive Bayesian classifier is *not* a phylogeny-based taxonomic assignment method and it *requires* that all taxa at the assignment rank have a single unique lineage, a requirement that is not met for species in the SILVA dataset.
 
-Species names were stripped from the SILVA fasta file, and any sequence that did not have a genus level taxonomic assignment was discarded.  It is likely that uncultured environmental sequences that are curated and named above the family rank (Yilmaz et al., 2013) are removed at this step.  After that filtering, all possible Eukaryote sequences were retained.  There were 2,841 eukaryote genera in the SILVA taxonomy file and 2,837 unique eukaryote genera in our reference set.  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with VSEARCH 2.14.1 (Rognes et al., 2016). The final set reference set here is comprised of 42,301 sequences representing 7,504 taxa (at all ranks).  
+Species names were stripped from the SILVA fasta file, and any sequence that did not have a genus level taxonomic assignment remaining was discarded.  At this step we noticed that several common species, though present in the SILVA fasta file, was missing from the SILVA taxonomy file such as cattle and maize.  As a result, sequences for these taxa have been removed from our reference set as well.  It is likely that uncultured environmental sequences that are curated by SILVA and named above the family rank (Yilmaz et al., 2013) are lacking genus names in the SILVA taxonomy file and are removed at this step as well.
+
+```linux
+# Bos taurus is present in the SILVA fasta file
+zcat SILVA_138_SSURef_NR99_tax_silva.fasta.gz| grep "Bos taurus"
+pisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Deuterostomia;Chordata;Vertebrata;Gnathostomata;Euteleostomi;Tetrapoda;Mammalia;Bos taurus (cattle)
+>AAFC05032335.570.2014 Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Deuterostomia;Chordata;Vertebrata;Gnathostomata;Euteleostomi;Actinopterygii;Neopterygii;Teleostei;Bos taurus (cattle)
+>AAFC05032349.519.1904 Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Deuterostomia;Chordata;Vertebrata;Gnathostomata;Euteleostomi;Actinopterygii;Neopterygii;Teleostei;Bos taurus (cattle)
+
+# The genus Bos is not present in the SILVA taxonomy file, partial matches shown
+grep Bos tax_slv_ssu_138.txt
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Beijerinckiaceae;Bosea;	26042	genus		132
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae;Boseongicola;	11447	genus		123
+
+# Zea mays is present in the SILVA fasta file, fist 5 matches shown
+>BT070196.1.1443 Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Zea mays
+>AC186791.8808.10609 Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Zea mays
+>AC185461.114179.116131 Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria;Zea mays
+>AC186791.33201.35001 Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Zea mays
+>AC185531.85946.87746 Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Zea mays
+
+# The genus Zea is not present in the SILVA taxonomy file, partial matches shown
+Bacteria;Bacteroidota;Bacteroidia;Flavobacteriales;Flavobacteriaceae;Zeaxanthinibacter;	44301	genus		138
+```
+
+All remaining Eukaryote sequences were retained.  There were 2,841 eukaryote genera in the SILVA taxonomy file and 2,837 unique eukaryote genera in our reference set.  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with VSEARCH 2.14.1 (Rognes et al., 2016). The final set reference set here is comprised of 42,301 sequences representing 7,504 taxa (at all ranks).  
 
 Taxonomic assignment results should be filtered according to their bootstrap support values to reduce false positive assignments.  Cutoffs are based on leave-one-sequence-out testing of non-singleton genera. Here we recommend MINIMUM bootstrap cutoffs according to query length and assignment rank.  Assuming your query sequences are represented in the reference set, using the cutoffs presented in the first table below should ensure 99% accuracy.  If you wish to cast a wider net, you can use the second table below for 95% accuracy.
 
