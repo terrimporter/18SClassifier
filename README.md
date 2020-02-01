@@ -31,13 +31,15 @@ Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Beijerinckiaceae;Bosea;	
 Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae;Boseongicola;	11447	genus		123
 
 # Zea mays is present in the SILVA fasta file, fist 5 matches shown
+zcat SILVA_138_SSURef_NR99_tax_silva.fasta.gz| grep "Zea mays"
 >BT070196.1.1443 Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Zea mays
 >AC186791.8808.10609 Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Zea mays
 >AC185461.114179.116131 Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Mitochondria;Zea mays
 >AC186791.33201.35001 Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Zea mays
 >AC185531.85946.87746 Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Zea mays
 
-# The genus Zea is not present in the SILVA taxonomy file, partial matches shown
+# The genus Zea is not present in the SILVA taxonomy file, partial match shown
+grep Zea tax_slv_ssu_138.txt
 Bacteria;Bacteroidota;Bacteroidia;Flavobacteriales;Flavobacteriaceae;Zeaxanthinibacter;	44301	genus		138
 ```
 
