@@ -2,6 +2,10 @@
 
 This repository contains trained reference sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote 18S rDNA sequences.  The latest releases can be downloaded from https://github.com/terrimporter/18SClassifier/releases
 
+# Note
+
+This classifier is suitable for coarsely classifying 18S sequences to order or class rank depending on the length of your query sequences.  Uncultivated environmental sequences are not well-represented in this set and a phylogeny-based taxonomic assignment method based on the SILVA 138 SSU Ref Nr99 would be recommended for flagging these taxa.  For more precise taxonomic assignments for a defined slice of target taxa, a taxon-specific classifier, preferrably with a curated taxonomy to the species rank is recommended and is forthcoming for diatoms.
+
 # Releases
 
 ### 18S v4.0
