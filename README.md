@@ -50,9 +50,9 @@ Bootstrap support cutoffs, 99% accuracy:
 Rank | Full | 400 bp | 300 bp | 200 bp | 100 bp
 --- |:---:|:---:|:---:|:---:|:---:
 Domain | 0 | 0 | 0 | 0 | 0
-Kingdom | 0 | 0 | 50 | 60 | 70
-Phylum | 0 | 0 | NA | NA | NA
-Class | 0 | - | NA | NA | NA
+Kingdom | - | 30 | 50 | 60 | 70
+Phylum | - | NA | NA | NA | NA
+Class | - | NA | NA | NA | NA
 Order | NA | NA | NA | NA | NA
 Family | NA | NA | NA | NA | NA
 Genus | NA | NA | NA | NA | NA . 
@@ -66,10 +66,10 @@ Rank | Full | 400 bp | 300 bp | 200 bp | 100 bp
 Domain | 0 | 0 | 0 | 0 | 0
 Kingdom | 0 | 0 | 0 | 0 | 0
 Phylum | 0 | 0 | 20 | 30 | 50
-Class | 0 | 0 | 60 | 70 | 90
-Order | 0 | - | NA | NA | NA
-Family | - | - | NA | NA | NA
-Genus | - | - | NA | NA | NA  
+Class | 0 | 50 | 60 | 70 | 90
+Order | 0 | 90 | NA | NA | NA
+Family | - | NA | NA | NA | NA
+Genus | - | NA | NA | NA | NA  
 
 NA = No cutoff available will result in 95% correct assignments
 
