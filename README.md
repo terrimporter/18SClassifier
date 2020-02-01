@@ -16,7 +16,7 @@ We checked for the presence of species with more than one unique taxonomic linea
 
 This version of the 18S classifier has been trained to make assignments to the **genus** rank only.  This was done for 3 reasons:  
 
-1) SILVA curates their phylogeny-based taxonomy to the genus rank (even though species labels are  present in their fasta file);  
+1) SILVA curates their phylogeny-based taxonomy to the genus rank (even though species labels are  present in the fasta file);  
 2) Based on the results of our leave-one-sequence-out testing of our 18S v3 classifier (below) it was not possible to obtain 95% accurate taxonomic assignments to the species rank for any fragment length anyways; and,  
 3) The naive Bayesian classifier is *not* a phylogeny-based taxonomic assignment method and it *requires* that all taxa at the assignment rank have a single unique lineage, a requirement that is not met for species in the SILVA dataset.
 
