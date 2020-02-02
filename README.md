@@ -53,7 +53,7 @@ All remaining Eukaryote sequences were retained.  **There were 2,841 eukaryote g
 
 #### Bootstrap support cutoffs, 99% accuracy:
 
-Rank | Full | 400 bp | 300 bp | 200 bp | 100 bp
+Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp
 --- |:---:|:---:|:---:|:---:|:---:
 Domain | 0 | 0 | 0 | 0 | 0
 Kingdom | 0 | 30 | 50 | 60 | 70
@@ -67,7 +67,7 @@ NA = No cutoff available will result in 99% correct assignments
 
 #### Bootstrap support cutoffs, 95% accuracy:
 
-Rank | Full | 400 bp | 300 bp | 200 bp | 100 bp
+Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp
 --- |:---:|:---:|:---:|:---:|:---:
 Domain | 0 | 0 | 0 | 0 | 0
 Kingdom | 0 | 0 | 0 | 0 | 0
