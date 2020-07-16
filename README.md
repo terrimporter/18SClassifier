@@ -34,7 +34,7 @@ Created from the SILVA 138 SSU Ref Nr99 (Preusse et al., 2007), the most recent 
 
 We checked for the presence of species with more than one unique taxonomic lineage using the check_for_SILVA_inconsistencies.plx script in the CheckSilva138Taxonomy directory.  We found that 2,495 / 98,776 (2.5%) *unique* species were annotated with more than one taxonomic lineage due to the way SILVA curates taxonomic lineages using an automated phylogeny-based method (combined with manual curation for certain groups).  This affects 335,983 / 510,984 (66%) of all the sequneces in the SILVA fasta file.  
 
-This version of the 18S classifier has been trained to make assignments to the **genus** rank only.  This was done for 3 reasons:  
+As a result, this version of the 18S classifier has been trained to make assignments to the **genus** rank only.  This was done for 3 reasons:  
 
 1) SILVA curates their phylogeny-based taxonomy to the genus rank (even though species labels are  present in the fasta file);  
 2) Based on the results of our leave-one-sequence-out testing of our 18S v3 classifier (below) it was not possible to obtain 95% accurate taxonomic assignments to the species rank for any fragment length anyways; and,  
