@@ -24,7 +24,7 @@ java -Xmx8g -jar /path/to/rdp_classifier_2.12/dist/classifier.jar classify -t /p
 
 ## Note
 
-This classifier is suitable for coarsely classifying 18S sequences to order or class rank depending on the length of your query sequences.  Uncultivated environmental sequences are not well-represented in this set and a phylogeny-based taxonomic assignment method based on the SILVA 138 SSU Ref Nr99 would be recommended for flagging these taxa.  For more precise taxonomic assignments for a defined slice of target taxa, a taxon-specific classifier, preferrably with a curated taxonomy to the species rank is recommended and is forthcoming for diatoms.
+This classifier is suitable for coarsely classifying 18S sequences to order or class rank depending on the length of your query sequences.  Uncultivated environmental sequences are not well-represented in this set and a phylogeny-based taxonomic assignment method based on the SILVA 138 SSU Ref Nr99 would be recommended for flagging these taxa.  For more precise taxonomic assignments for a defined slice of target taxa, a taxon-specific classifier, preferrably with a curated taxonomy to the species rank is recommended.  A diatom-specific SSU classifier based on the R-syst::diatom database is available at https://github.com/terrimporter/SSUdiatomClassifier.
 
 # Releases
 
