@@ -38,7 +38,7 @@ As a result, this version of the 18S classifier has been trained to make assignm
 2) Based on the results of our leave-one-sequence-out testing of our 18S v3 classifier (below) it was not possible to obtain 95% accurate taxonomic assignments to the species rank for any fragment length anyways; and,  
 3) The naive Bayesian classifier is *not* a phylogeny-based taxonomic assignment method and it *requires* that all taxa at the assignment rank (ex. species) have a single unique lineage, a requirement that is not met for most sequences in the SILVA dataset.
 
-Species names were stripped from the SILVA fasta file, and any sequence that did not have a genus level taxonomic assignment remaining was discarded.  At this step we noticed that several common species, though present in the SILVA fasta file, were missing from the SILVA taxonomy file such as cattle and maize.  As a result, sequences for these taxa have been removed from our reference set as well.  It is likely that uncultured environmental sequences that are curated by SILVA and named above the family rank (Yilmaz et al., 2013) are lacking genus names in the SILVA taxonomy file and are removed at this step as well.
+Species names were stripped from the SILVA fasta file, and any sequence that did not have a genus level taxonomic assignment remaining was discarded.  At this step we noticed that several common species, though present in the SILVA fasta file, were missing from the SILVA taxonomy file such as cattle and maize.  As a result, sequences for these taxa have been removed from our reference set as well.  It is likely that uncultured environmental sequences that are curated by SILVA and named above the family rank (Yilmaz et al., 2013) are lacking genus names in the SILVA taxonomy file and are removed at this step as well.  *For some genera, certain intermediate ranks (family, order, class, etc.) may also be missing due to the way SILVA has taxonomically annotated these sequences.  These genera can still be classified with the RDP classifier, but downstream analyses will need to be aware that these intermediate ranks may be missing.
 
 ```linux
 # Bos taurus is present in the SILVA fasta file
@@ -163,4 +163,4 @@ Yilmaz, P., Parfrey, L.W., Yarza, P., Gerken, J., Pruesse, E., Quast, C., et al.
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: July 16, 2020
+Last updated: August 12, 2020
