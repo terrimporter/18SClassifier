@@ -159,6 +159,34 @@ NA = No cutoff available will result in 95% correct assignments
 
 Created to classify Eukaryotes for Jesse Hoage's Master's thesis.  18S rDNA sequences were mined from GenBank July 24, 2017.  Comprised of 91,283 sequences representing 27,881 taxa (at all ranks).
 
+Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~99% correct assignments:
+
+Rank | Full | 600 bp | 400 bp | 200 bp | 100 bp | 50 bp
+--- |:---:|:---:|:---:|:---:|:---:|:---:
+Superkingdom | 0 | 0 | 0 | 0 | 0 | 95
+Kingdom | 0 | 0 | 0 | 0 | 30 | NA
+Phylum | 0 | 0 | 0 | 0 | 70 | NA
+Class | 40 | 50 | 50 | 70 | 95 | NA
+Order | NA | 95 | NA | NA | NA | NA
+Family | NA | NA | NA | NA | NA | NA
+Genus | NA | NA | NA | NA | NA | NA
+
+NA = No cutoff available will result in 99% correct assignments
+
+Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~ 95% correct assignments:
+
+Rank | Full | 600 bp | 400 bp | 200 bp | 100 bp | 50 bp
+--- |:---:|:---:|:---:|:---:|:---:|:---:
+Superkingdom | 0 | 0 | 0 | 0 | 0 | 0
+Kingdom | 0 | 0 | 0 | 0 | 0 | 40
+Phylum | 0 | 0 | 0 | 0 | 0 | NA
+Class | 0 | 0 | 0 | 0 | 40 | NA
+Order | 0 | 0 | 0 | 50 | 90 | NA
+Family | 90 | 90 | 90 | NA | NA | NA
+Genus | NA | NA | NA | NA | NA | NA
+
+NA = No cutoff available will result in 95% correct assignments
+
 ### 18S v1.0
 
 Created to specifically classify diatoms (Bacillariophyta).  18S rDNA sequences were mined from GenBank August 25, 2016.  Comprised of 1,658 sequences representing 272 taxa (at all ranks).
@@ -177,4 +205,4 @@ Yilmaz, P., Parfrey, L.W., Yarza, P., Gerken, J., Pruesse, E., Quast, C., et al.
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: August 12, 2020
+Last updated: August 17, 2020
