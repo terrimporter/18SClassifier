@@ -97,6 +97,20 @@ Genus | 95 | NA | NA | NA | NA
 
 NA = No cutoff available will result in 95% correct assignments
 
+#### Bootstrap support cutoffs, 90% accuracy:
+
+Rank | 500bp+ | 400 bp | 300 bp | 200 bp | 100 bp
+--- |:---:|:---:|:---:|:---:|:---:
+Domain | 0 | 0 | 0 | 0 | 0
+Kingdom | 0 | 0 | 0 | 0 | 0
+Phylum | 0 | 0 | 0 | 0 | 10
+Class | 0 | 0 | 0 | 0 | 30
+Order | 0 | 30 | 40 | 50 | 60
+Family | 0 | 60 | 70 | 80 | 95
+Genus | 70 | 95 | 95 | NA | NA  
+
+NA = No cutoff available will result in 90% correct assignments
+
 ### 18S v3.2
 
 A few invasive species of interest were added even though they were not present in the original SILVA 132 SSU Ref Nr99 dataset.  The sequences were obtained from GenBank, taxonomy was edited to match that used by SILVA.
