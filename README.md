@@ -187,6 +187,20 @@ Genus | NA | NA | NA | NA | NA | NA
 
 NA = No cutoff available will result in 95% correct assignments
 
+Assuming that your query sequences are present in the reference set, using these cutoffs should result in ~ 90% correct assignments:
+
+Rank | Full | 600 bp | 400 bp | 200 bp | 100 bp | 50 bp
+--- |:---:|:---:|:---:|:---:|:---:|:---:
+Superkingdom | 0 | 0 | 0 | 0 | 0 | 0
+Kingdom | 0 | 0 | 0 | 0 | 0 | 0
+Phylum | 0 | 0 | 0 | 0 | 0 | 40
+Class | 0 | 0 | 0 | 0 | 0 | 80
+Order | 0 | 0 | 0 | 0 | 50 | NA
+Family | 30 | 50 | 50 | 70 | 95 | NA
+Genus | 95 | 95 | 95 | NA | NA | NA
+
+NA = No cutoff available will result in 90% correct assignments
+
 ### 18S v1.0
 
 Created to specifically classify diatoms (Bacillariophyta).  18S rDNA sequences were mined from GenBank August 25, 2016.  Comprised of 1,658 sequences representing 272 taxa (at all ranks).
