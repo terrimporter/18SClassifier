@@ -2,7 +2,7 @@
 
 This repository contains trained reference sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote 18S rDNA sequences.  The latest releases can be downloaded from https://github.com/terrimporter/18SClassifier/releases
 
-This classifier is suitable for coarsely classifying 18S sequences to order or class rank depending on the length of your query sequences.  Uncultivated environmental sequences are not well-represented in this set and a phylogeny-based taxonomic assignment method based on the SILVA 138 SSU Ref Nr99 would be recommended for flagging these taxa.  For more precise taxonomic assignments for a defined slice of target taxa, a taxon-specific classifier, preferrably with a curated taxonomy to the species rank is recommended.  A diatom-specific SSU classifier based on the R-syst::diatom database is available at https://github.com/terrimporter/SSUdiatomClassifier.
+This classifier is suitable for coarsely classifying 18S sequences to genus rank depending on the length of your query sequences and level of accuracy you need.  Uncultivated environmental sequences are not well-represented in this set and a phylogeny-based taxonomic assignment method based on the SILVA 138 SSU Ref Nr99 would be recommended for flagging these taxa.  For more precise taxonomic assignments for a defined slice of target taxa, a taxon-specific classifier, preferrably with a curated taxonomy to the species rank is recommended.  A diatom-specific SSU classifier based on the R-syst::diatom database is available at https://github.com/terrimporter/SSUdiatomClassifier.
 
 ## How to cite
 
@@ -25,6 +25,10 @@ Use with the RDP classifier:
 java -Xmx8g -jar /path/to/rdp_classifier_2.12/dist/classifier.jar classify -t /path/to/mydata_trained/rRNAClassifier.properties -o ClassifiedQueryFilename QueryFilename
 
 # Releases
+
+### 18S v4.1
+
+Training set was revised to include place holder taxa (ex. Eukaryota_undef) for ranks that were missing from the SILVA taxonomy.  This was done to maintain a tabular alignment with no gaps for missing ranks for easy parsing by downstream programs.  To reduce false-positive assignments, and ensure good accuracy, use the bootstrap cutoffs listed in the 18S v4.0 tables below.
 
 ### 18S v4.0
 
@@ -65,9 +69,9 @@ grep Zea tax_slv_ssu_138.txt
 Bacteria;Bacteroidota;Bacteroidia;Flavobacteriales;Flavobacteriaceae;Zeaxanthinibacter;	44301	genus		138
 ```
 
-All remaining Eukaryote sequences were retained.  **There were 2,841 eukaryote genera in the SILVA taxonomy file and 2,837 unique eukaryote genera in our reference set.**  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with VSEARCH 2.14.1 (Rognes et al., 2016). The final reference set here is comprised of 42,301 sequences representing 7,504 taxa (at all ranks).  
+All remaining Eukaryote sequences were retained.  **There were 2,841 eukaryote genera in the SILVA taxonomy file and 2,838 unique eukaryote genera in our reference set.**  Bacterial and archael outgroup sequences were subsampled by clustering at 90% sequence similarity with VSEARCH 2.14.1 (Rognes et al., 2016). The final reference set here is comprised of 42,301 sequences representing 7,944 taxa (at all ranks).  
 
-**Taxonomic assignment results should be filtered according to their bootstrap support values to reduce false positive assignments.**  Cutoffs are based on leave-one-sequence-out testing of non-singleton genera. Here we recommend MINIMUM bootstrap cutoffs according to query length and assignment rank.  Assuming your query sequences are represented in the reference set, using the cutoffs presented in the first table below should ensure 99% accuracy.  If you wish to cast a wider net, you can use the second table below for 95% accuracy.
+**Taxonomic assignment results should be filtered according to their bootstrap support values to reduce false positive assignments.**  Cutoffs are based on leave-one-sequence-out testing of non-singleton genera. Here we recommend MINIMUM bootstrap cutoffs according to query length and assignment rank.  Assuming your query sequences are represented in the reference set, using the cutoffs presented in the first table below should ensure 99% accuracy.  If you wish to cast a wider net, you can use the second table below for 95% accuracy or the third table below for 90% accuracy.
 
 #### Bootstrap support cutoffs, 99% accuracy:
 
@@ -219,4 +223,4 @@ Yilmaz, P., Parfrey, L.W., Yarza, P., Gerken, J., Pruesse, E., Quast, C., et al.
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: August 17, 2020
+Last updated: August 18, 2020
