@@ -12,7 +12,8 @@ If you use this 18S reference set in a publication, please cite SILVA:
 
 Pruesse E, Quast C, Knittel K, Fuchs BM, Ludwig WG, Peplies J, Glöckner FO (2007) SILVA: a comprehensive online resource for quality checked and aligned ribosomal RNA sequence data compatible with ARB. Nucl. Acids Res. 35:7188-7196 
 
-You can also cite this repository directly:
+You can also cite this repository directly:  
+
 18S Classifier, DOI: 10.5281/zenodo.4741433  
 
 If you use this reference set with the RDP classifier please also cite:
