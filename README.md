@@ -1,14 +1,19 @@
 # Introduction
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4741433.svg)](https://doi.org/10.5281/zenodo.4741433)  
+
 This repository contains trained reference sets that can be used with the Ribosomal Database Project classifier (Wang et al., 2007) to taxonomically assign Eukaryote 18S rDNA sequences.  The latest releases can be downloaded from https://github.com/terrimporter/18SClassifier/releases
 
 This classifier is suitable for coarsely classifying 18S sequences to genus rank depending on the length of your query sequences and level of accuracy you need.  Uncultivated environmental sequences are not well-represented in this set and a phylogeny-based taxonomic assignment method based on the SILVA 138 SSU Ref Nr99 would be recommended for flagging these taxa.  For more precise taxonomic assignments for a defined slice of target taxa, a taxon-specific classifier, preferrably with a curated taxonomy to the species rank is recommended.  A diatom-specific SSU classifier based on the R-syst::diatom database is available at https://github.com/terrimporter/SSUdiatomClassifier.
 
 ## How to cite
 
-If you use this 18S reference set in a publication, please link to this page in your methods section, and cite SILVA: 
+If you use this 18S reference set in a publication, please cite SILVA: 
 
 Pruesse E, Quast C, Knittel K, Fuchs BM, Ludwig WG, Peplies J, Glöckner FO (2007) SILVA: a comprehensive online resource for quality checked and aligned ribosomal RNA sequence data compatible with ARB. Nucl. Acids Res. 35:7188-7196 
+
+You can also cite this repository directly:
+18S Classifier, DOI: 10.5281/zenodo.4741433  
 
 If you use this reference set with the RDP classifier please also cite:
 
@@ -239,4 +244,4 @@ Yilmaz, P., Parfrey, L.W., Yarza, P., Gerken, J., Pruesse, E., Quast, C., et al.
 
 We acknowledge support from the Canadian federal Genomics Research & Development Initiative (GRDI), Metagenomics-Based Ecosystem Biomonitoring (Ecobiomics) project.
 
-Last updated: March 31, 2021
+Last updated: May 6, 2021
